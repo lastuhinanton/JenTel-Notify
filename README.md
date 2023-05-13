@@ -28,7 +28,7 @@ Info: we do this because we need to get ***token_id*** and ***chat_id*** for our
 
    **Congratulations!** we have created a bot and also know the token of it. It will be usefull for us a little bit later.
 
-   ![1683979465385](https://vscode-remote+ssh-002dremote-002blovedevops.vscode-resource.vscode-cdn.net/home/user/JenTel-Notify/image/README/1683979465385.png)
+   ![1683984623293](image/README/1683984623293.png)
 3. Now let's find out the chat_id and turn back to the search field writing @RawDataBot like in the screenshoot below
 
    ![1683979873200](image/README/1683979873200.png)
@@ -70,6 +70,8 @@ I assume that you already have a ready-made pipeline, but in any case, for now w
    ![1683984069145](image/README/1683984069145.png)
 
    ![1683984083882](image/README/1683984083882.png)
+
+   ![1683984256967](image/README/1683984256967.png)
 2. Let's take a look at the example below:
 
 ![1683982873806](image/README/1683982873806.png)
@@ -80,5 +82,5 @@ I assume that you already have a ready-made pipeline, but in any case, for now w
 
    What we have here:
 
-   1. Credential 'chat_id' with variable 'CHAT_ID'.
-   2. Credential 'bot_id' with variable 'BOT_ID'
+   * Credential 'chat_id' with variable 'CHAT_ID'.
+   * Credential 'bot_id' with variable 'BOT_ID'
