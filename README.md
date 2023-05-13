@@ -89,4 +89,12 @@ I assume that you already have a ready-made pipeline, but in any case, for now w
 
 ![1683985206385](image/README/1683985206385.png)
 
-It works! Congratulations!
+##### It works! Congratulations!
+
+
+## Summary:
+
+I hope everything was clear and usefull for you. If you have some questions of this project don't hesitate to write me a message:
+
+* lastuhinanton74@gmail.com
+* @lastuhinanton (Telegram)
