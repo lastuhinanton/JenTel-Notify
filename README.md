@@ -4,6 +4,11 @@
 
 Hello, my name is Anton and this is my project for making notification of Jenkins's status pipeline easier.
 
+The result will be like this:
+
+<img src="image/README/1683986222106.png" alt="alt text" width="400">
+<img src="image/README/1683986228592.png" alt="alt text" width="400">
+
 ### Requirements:
 
 1. **Jenkins** on any machines whatever you prefer
@@ -88,7 +93,6 @@ I assume that you already have a ready-made pipeline, but in any case, for now w
 ![1683985206385](image/README/1683985206385.png)
 
 ##### It works! Congratulations!
-
 
 ## Summary:
 
