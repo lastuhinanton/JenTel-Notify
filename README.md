@@ -8,7 +8,7 @@ Hello, my name is Anton and this is my project for making notification of Jenkin
 
 1. **Jenkins** on any machines whatever you prefer
    (make sure that your Jenkins works well with the help of creating a Freestyle project, for example)
-2. **Telegram bot**
+2. **Telegram**
 
 ## Start:
 
