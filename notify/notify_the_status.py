@@ -43,7 +43,6 @@ def finish_pipeline(arguments):
     id_pipeline = arguments[2]
     token_id = arguments[3]
     chat_id = arguments[4]
-    status = arguments[5]
     now = datetime.now()
     message = f"""
 Time: {now.strftime("%H:%M:%S")}
