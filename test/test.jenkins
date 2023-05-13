@@ -1,0 +1,81 @@
+pipeline{
+    agent{
+        label 'main'
+    }
+    stages{
+        stage("Start") {
+            steps{
+                withCredentials([string(credentialsId: 'chat_id', variable: 'CHAT_ID'), string(credentialsId: 'bot_id', variable: 'BOT_ID')]) {
+                    dir ('notify') {
+                        sh """
+                            python3 notify_the_status.py 'start' ${currentBuild.number} $BOT_ID $CHAT_ID
+                        """
+                    }
+                }
+            }
+        }
+        stage("Build"){
+            steps{
+                echo "======= Build stage ======="
+                dir ('docker/toolbox') {
+                    sh 'docker build -t antonlastukhin/server:latest .'
+                }
+            }
+            post {
+                always{
+                    withCredentials([string(credentialsId: 'chat_id', variable: 'CHAT_ID'), string(credentialsId: 'bot_id', variable: 'BOT_ID')]) {
+                        dir ('notify') {
+                            sh """
+                                python3 notify_the_status.py 'stage' $BOT_ID $CHAT_ID ${currentBuild.result} ${currentBuild.absoluteUrl} "Build"
+                            """
+                        }
+                    }
+                }
+            }
+        }
+        stage("Test"){
+            steps{
+                echo "======= Test stage ======="
+            }
+            post {
+                always{
+                    withCredentials([string(credentialsId: 'chat_id', variable: 'CHAT_ID'), string(credentialsId: 'bot_id', variable: 'BOT_ID')]) {
+                        dir ('notify') {
+                            sh """
+                                python3 notify_the_status.py 'stage' $BOT_ID $CHAT_ID ${currentBuild.result} ${currentBuild.absoluteUrl} "Test"
+                            """
+                        }
+                    }
+                }
+            }
+        }
+        stage("Deploy"){
+            steps{
+                echo "======= Deploy ======="
+            }
+            post {
+                always{
+                    withCredentials([string(credentialsId: 'chat_id', variable: 'CHAT_ID'), string(credentialsId: 'bot_id', variable: 'BOT_ID')]) {
+                        dir ('notify') {
+                            sh """
+                                python3 notify_the_status.py 'stage' $BOT_ID $CHAT_ID ${currentBuild.result} ${currentBuild.absoluteUrl} "Deploy"
+                            """
+                        }
+                    }
+                }
+            }
+        }
+    }
+    post{
+        always{
+            echo "======= Finish ======="
+            withCredentials([string(credentialsId: 'chat_id', variable: 'CHAT_ID'), string(credentialsId: 'bot_id', variable: 'BOT_ID')]) {
+                dir ('notify') {
+                    sh """
+                        python3 notify_the_status.py 'finish' ${currentBuild.number} $BOT_ID $CHAT_ID ${currentBuild.result}
+                    """
+                }
+            }
+        }
+    }
+}
