@@ -65,7 +65,7 @@ Info: we do this because we need to get ***token_id*** and ***chat_id*** for our
 
 I assume that you already have a ready-made pipeline, but in any case, for now we can use the test one ([your_repo]/test/test.jenkins).
 
-1. The configuration of this project is:
+1. The configuration of this pipeline is:
 
    ![1683984069145](image/README/1683984069145.png)
 
@@ -84,3 +84,9 @@ I assume that you already have a ready-made pipeline, but in any case, for now w
 
    * Credential 'chat_id' with variable 'CHAT_ID'.
    * Credential 'bot_id' with variable 'BOT_ID'
+
+   #### Let's try to test our module
+
+![1683985206385](image/README/1683985206385.png)
+
+It works! Congratulations!
