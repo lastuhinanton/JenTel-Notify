@@ -20,7 +20,7 @@ Info: we do this because we need to get ***token_id*** and ***chat_id*** for our
 
 ![1683978757759](image/README/1683978757759.png)
 
-    Click on the first one with id**@BotFather**
+    Click on the first one with id "@BotFather"
 
 2. Type "/start" and "/newbot" then folow the bot instructions untile the message like in the screenshoot below
 
