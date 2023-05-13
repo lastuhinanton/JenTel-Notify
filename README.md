@@ -6,9 +6,10 @@ Hello, my name is Anton and this is my project for making notification of Jenkin
 
 The result will be like this:
 
-<img src="image/README/1683986222106.png" alt="alt text" width="400">
+<div style="display:flex;">
+<img src="image/README/1683986222106.png" alt="alt text" width="400"style="margin-right:15px;">
 <img src="image/README/1683986228592.png" alt="alt text" width="400">
-
+</div>
 ### Requirements:
 
 1. **Jenkins** on any machines whatever you prefer
